@@ -1,0 +1,55 @@
+Proyecto: Control de Acceso con Teclado, Relé y Sensor Infrarrojo
+------------------------------------------------------------------------------------------------------------------------------
+Materiales Necesarios:
+
+*Arduino Uno o una placa compatible.
+*Módulo de relé.
+*Sensor infrarrojo (por ejemplo, un módulo de sensor infrarrojo de detección de obstáculos).
+*Teclado matricial (keypad) 4x4.
+*Pantalla LCD I2C.
+*Cables jumper para las conexiones.
+*Resistor de 220 ohmios.
+*LEDs (verde y rojo).
+*Protoboard (placa de pruebas) para ensamblar el circuito.
+*Fuente de alimentación (por ejemplo, batería o adaptador de corriente) para alimentar el Arduino.
+------------------------------------------------------------------------------------------------------------------------------
+Recomendaciones:
+
+Organización: Antes de comenzar, organiza tus componentes y herramientas para un proceso fluido.
+Seguridad: Asegúrate de trabajar en un área libre de estática y con precaución para evitar dañar los componentes.
+Conexiones: Asegúrate de realizar las conexiones de manera correcta y segura para evitar cortocircuitos.
+Código: Examina y comprende el código antes de cargarlo en el Arduino para saber lo que hace cada parte del proyecto.
+------------------------------------------------------------------------------------------------------------------------------
+Conexiones:
+
+Conecta el módulo de relé al Arduino: Conecta el pin de control del relé al pin 10 del Arduino. Conecta también la alimentación y el GND del relé a una fuente de alimentación adecuada (ten cuidado con la polaridad).
+
+Conecta el sensor infrarrojo: Conecta el pin de señal del sensor infrarrojo al pin A0 del Arduino. Conecta la alimentación y el GND del sensor al 5V y GND respectivamente.
+
+Conecta el keypad: Conecta los pines del keypad a las filas y columnas según la disposición del keypad. Asegúrate de que los pines estén conectados correctamente.
+
+Conecta la pantalla LCD: Conecta el módulo de la pantalla LCD I2C al Arduino usando los pines SDA y SCL para la comunicación I2C.
+
+Conecta los LEDs: Conecta los LEDs verde y rojo a los pines 11 y 12 del Arduino respectivamente, usando una resistencia de 220 ohmios en serie con cada LED para limitar la corriente.
+
+Alimentación: Asegúrate de alimentar correctamente el Arduino y los componentes conectados. Si usas una batería, asegúrate de que la tensión sea adecuada y que tengas una forma de cargarla.
+------------------------------------------------------------------------------------------------------------------------------
+Funcionamiento:
+
+Inicia el proyecto: Al encender el Arduino, la pantalla LCD mostrará un mensaje de bienvenida y desplazará el texto. Luego, solicitará el ingreso del PIN.
+
+Ingresar el PIN: Usa el keypad para ingresar el PIN de seguridad. Si el PIN es correcto, el relé se activará, encendiendo el LED verde y mostrando un mensaje de "Abriendo Puerta" en la pantalla LCD.
+
+Detección de Obstáculos: Cuando el relé esté activado, el sensor infrarrojo detectará si hay un obstáculo en su campo de visión. Si no se detecta un obstáculo, el relé se apagará después de 10 segundos. Si se detecta un obstáculo, el relé se mantendrá activado hasta que el obstáculo desaparezca.
+
+Acceso Concedido: Una vez que el relé se desactive, el LED verde y el mensaje en la pantalla se apagarán. El sistema estará listo para el próximo intento de acceso.
+---------------------------------------------------------------------------------------------------------------------------------
+Consideraciones Finales:
+
+Realiza todas las conexiones con precaución y siguiendo las especificaciones de los componentes.
+Asegúrate de comprender cómo funciona cada componente y cómo interactúan entre sí.
+Verifica el voltaje y corriente de la fuente de alimentación para evitar dañar los componentes.
+Siempre mantén un ojo en la temperatura de los componentes, especialmente el Arduino, para evitar sobrecalentamientos.
+Puedes ajustar los tiempos de retardo y otros parámetros en el código según tus necesidades.
+
+Recuerda que este proyecto es solo una guía y puede ser modificado y ampliado según tus necesidades y creatividad. ¡Diviértete explorando y aprendiendo más sobre Arduino y electrónica!
